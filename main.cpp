@@ -79,6 +79,11 @@ int main() {
             case 2:
                 displayStudents(database);
                 break;
+            case 3: {
+                double averageAge = calculateAverageAge(database);
+                std::cout << "Средний возраст студентов: " << averageAge << "\n\n";
+                break;
+            }
             case 0:
                 std::cout << "Выход из программы.\n";
                 break;
