@@ -45,6 +45,20 @@ void displayStudents(const std::vector<Student>& database) {
     }
 }
 
+// Функция для подсчета среднего возраста студентов
+double calculateAverageAge(const std::vector<Student>& database) {
+    if (database.empty()) {
+        return 0.0;
+    }
+
+    int totalAge = 0;
+    for (const Student& student : database) {
+        totalAge += student.age;
+    }
+
+    return static_cast<double>(totalAge) / database.size();
+}
+
 int main() {
     std::vector<Student> database;
 
