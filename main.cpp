@@ -9,6 +9,15 @@ struct Student {
     double gpa;
 };
 
+// Функция для отображения меню
+void displayMenu() {
+    std::cout << "Меню:\n";
+    std::cout << "1. Добавить студента\n";
+    std::cout << "2. Вывести список студентов\n";
+    std::cout << "0. Выход\n";
+    std::cout << "Выберите действие: ";
+}
+
 // Функция для добавления студента в базу данных
 void addStudent(std::vector<Student>& database) {
     Student student;
