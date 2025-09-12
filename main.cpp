@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>  // Для std::fixed и std::setprecision
 
 struct Student {
     std::string name;
