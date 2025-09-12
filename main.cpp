@@ -80,8 +80,14 @@ int main() {
                 displayStudents(database);
                 break;
             case 3: {
-                double averageAge = calculateAverageAge(database);
-                std::cout << "Средний возраст студентов: " << averageAge << "\n\n";
+                if (database.empty()) {
+                    std::cout << "База данных пуста. Невозможно вычислить средний возраст.\n\n";
+                }
+                else {
+                    double averageAge = calculateAverageAge(database);
+                    std::cout << "Средний возраст студентов: " << std::fixed
+                        << std::setprecision(1) << averageAge << " лет\n\n";
+                }
                 break;
             }
             case 0:
