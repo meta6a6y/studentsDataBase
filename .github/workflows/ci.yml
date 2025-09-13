@@ -2,9 +2,9 @@ name: C/C++ Tests
 
 on:
   push:
-    branches: ["main"]
+    branches: ["prl/15"]
   pull_request:
-    branches: ["main"]
+    branches: ["prl/15"]
 
 jobs:
   build-and-test:
