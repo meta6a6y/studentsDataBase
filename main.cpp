@@ -38,6 +38,11 @@ void addStudent(std::vector<Student>& database) {
 
 // Функция для вывода всех студентов из базы данных
 void displayStudents(const std::vector<Student>& database) {
+    if (database.empty()) {
+        std::cout << "База данных пуста.\n\n";
+        return;
+    }
+
     std::cout << "Список студентов:\n";
     for (const Student& student : database) {
         std::cout << "Имя: " << student.name << "\n";
